@@ -22,7 +22,11 @@ Api.addCollection(Earthquakes, {
   endpoints: {
     getAll: {
       action() {
-        const earthquakes = Earthquakes.find();
+        const earthquakes = Earthquakes.find({ }, {
+          sort: {
+            date: -1
+          }
+        });
 
         return {
           status: 'success',
