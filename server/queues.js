@@ -7,9 +7,7 @@ import { parseBody, getFields, sliceList } from '../imports/utils/shortcuts';
 
 const log = console.log;
 
-// RedİS
-const REDIS_URL = 'redis://127.0.0.1:32774';
-const KOERI_API_URL = 'http://koeri.boun.edu.tr/scripts/lst7.asp';
+const { REDIS_URL, DEP_API_URL } = process.env;
 
 // Queues
 EarthquakesQueue = Queue('earthquakes', REDIS_URL);
@@ -21,7 +19,7 @@ EarthquakesQueue.process(
     log(chalk.blue('EarthquakesQueue - ÇALIŞTI'))
 
 		Request(
-			KOERI_API_URL,
+			DEP_API_URL,
 			Meteor.bindEnvironment((err, res, body) => {
         if (err) {
           return log(chalk.red('Request - ULAŞAMADI!'))
