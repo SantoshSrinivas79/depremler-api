@@ -33,7 +33,7 @@ EarthquakesQueue.process(
 
 						if (_.isUndefined(earthquake)) {
 							return Earthquakes.insert(data, (error, result) => {
-								return notification(`${data.location} üzerinde ${doc.depth} km derinliğinde ${doc.force} büyüklüğünde deprem oldu!`);
+								return notification(`${data.location} üzerinde ${data.depth} km derinliğinde ${data.force} büyüklüğünde deprem oldu!`);
 							});
 						}
 					})
