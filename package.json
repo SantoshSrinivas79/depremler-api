@@ -2,7 +2,8 @@
   "name": "deprem-api",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "android": "adb reverse tcp:3000 tcp:3000 && react-native run-android"
   },
   "dependencies": {
     "@babel/runtime": "^7.3.4",
@@ -12,6 +13,7 @@
     "cheerio": "^1.0.0-rc.3",
     "meteor-node-stubs": "^0.4.1",
     "moment": "^2.24.0",
+    "onesignal-node": "^2.1.1",
     "request": "^2.88.0"
   }
 }

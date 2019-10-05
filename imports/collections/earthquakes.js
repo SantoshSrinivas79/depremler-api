@@ -22,7 +22,7 @@ Earthquakes.helpers({ });
 Earthquakes.mutations({ });
 
 Earthquakes.after.insert((userId, doc) => {
-  console.log('DEPREM OLDU');
+
 });
 
 export default Earthquakes;
