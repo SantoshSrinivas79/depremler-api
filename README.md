@@ -14,6 +14,13 @@ Started development mode.
     meteor
 
 
+## One signal exports
+One signal tarafındaki keylerin aşşağıdaki şekilde setlenmesi gerekiyor.
+
+    export ONESIGNAL_USER_AUTH_KEY=XXX
+    export ONESIGNAL_APP_AUTH_KEY=XXXXXXX
+    export ONESIGNAL_APP_ID=XXXXXXX
+
 ### Endpoints
 
 [/api/earthquakes](http://localhost:3000/api/earthquakes)
